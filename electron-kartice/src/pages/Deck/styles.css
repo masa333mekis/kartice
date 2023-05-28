@@ -1,0 +1,460 @@
+.App {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  background-color: rgba(36, 35, 35, 0.82);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 16px;
+  width: 300px;
+}
+.popup input[type="radio"] {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.popup .group-name{
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #fff;
+}
+
+.popup button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-top: -0.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+li:hover {  
+  background-color: #f5f5f5;
+}
+
+.deck-create-component {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  padding: 3rem;
+  }
+
+
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: 4rem;
+  
+}
+.deck-create-component .create-btn{
+  margin-top: 2rem;
+  margin-left: 1rem;
+  width: 12rem;
+}
+.deck-create-component .user-library{
+  margin-top: 8rem;
+  margin-left: -9rem;
+  width: 12rem;
+}
+.deck-create-component .create-group{
+  margin-top: 14rem;
+  margin-left: -15rem;
+  width: 12rem;
+}
+
+.deck-create-component .join-group{
+  margin-top: 20rem;
+  margin-left: -12rem;
+  width: 12rem;
+}
+
+.search-component {
+  position: fixed;
+  top: 4rem;
+  align-items: center;
+  width: 60rem;
+  margin-left: -10rem;
+  background-color:transparent; 
+  border: none;
+  box-shadow: none;
+
+}
+
+#search-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  flex: 1;
+}
+
+.search-btn {
+  margin-top: -2.4rem;
+  margin-left: 27rem;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+  background-color: #0056b3;
+}
+
+.timer{
+  position: fixed;
+  top: 20px;
+  right: 80px;
+}
+#button-light , #button-dark {
+  border-radius: 0;  
+  transition: background-color 0.3s;
+}
+#button-light:hover{
+  background-color: #424141;
+}
+#button-dark:hover{
+  background-color: #a7a2a2be;
+}
+
+.logout-button {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+
+}
+.deck-list{
+position: absolute;
+/* max-height: 300px; */
+max-height: 400px;
+overflow-y: auto; 
+width: 34rem;  
+margin-top: 4rem;
+margin-left: -12rem;
+}
+.card{
+margin-left: 8rem;
+max-width: 400px !important;
+}
+.deck-list button{
+margin-right: 10px;
+}
+.group-card-dark .group-name{
+  color: white;
+}
+.group-card-dark:hover .group-name{
+  color: #050505;
+}
+
+.group-card-dark:hover{
+  color: #050505;
+}
+.group-list{
+/* background-color: #ccc; */
+position: absolute; 
+margin-left: 50rem;
+max-height: 400px;
+overflow-y: auto; 
+margin-top: 2rem;
+}
+.deck-alignment{
+/* background-color: #007bff; */
+width: 400px;
+height: 600px;
+}
+
+@media (max-width: 1245px) {
+.deck-create-component {
+  top: 5rem;
+  left: 1rem;
+}
+}
+
+@media (max-width: 1077px) {
+.search-component {
+  margin-left: -4rem;
+}
+.deck-list{
+  margin-left: -5rem;
+}
+.group-list{
+  margin-left: 45rem;
+}
+}
+
+@media (max-width: 987px) {
+.group-list{
+  margin-top: 60rem;
+  margin-left: 3rem;
+}
+.search-component{
+  position: absolute;
+  margin-right: -26rem;
+}
+.deck-list{
+  margin-right: -25rem;
+}
+.timer{
+  position: absolute;
+}
+.logout-button{
+  position: absolute;
+}
+}
+@media (max-width: 896px) {
+.search-component{
+  position: absolute;
+  margin-right: -15rem;
+}
+.deck-list{
+  margin-right: -15rem;
+}
+}
+@media (max-width: 721px) {
+
+
+
+.deck-create-component{
+  margin-top: -3rem;
+  margin-left: 12rem;
+
+}
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: 2rem;
+}
+
+.deck-create-component .create-btn{
+  margin-top: 2rem;
+  margin-left: -7rem;
+  width: 24rem;
+}
+.deck-create-component .user-library{
+  margin-top: 8rem;
+  margin-left: -15rem;
+  width: 12rem;
+}
+.deck-create-component .create-group{
+  margin-top: 14rem;
+  margin-left: -21rem;
+  width: 24rem;
+}
+
+.deck-create-component .join-group{
+  margin-top: 20rem;
+  margin-left: -24rem;
+  width: 24rem;
+}
+
+.search-component{
+  position: absolute;
+  margin-top: 24rem;
+  margin-right: 2rem;
+}
+.deck-list{
+  margin-top: 57rem;
+  margin-left: -23rem;
+}
+.group-list {
+  margin-top: 107rem;
+  margin-left: -1rem;
+}
+}
+.popup .popup-create-btn{
+
+}
+
+@media (max-width: 614px) {
+.deck-create-component .create-btn {
+  margin-top: 2rem;
+  margin-left: -9rem;
+  width: 24rem;
+}
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: 0rem;
+}
+}
+@media (max-width: 542px) {
+
+
+.deck-create-component .create-btn {
+  margin-top: 2rem;
+  margin-left: -11rem;
+  width: 24rem;
+}
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: -2rem;
+}
+}
+@media (max-width: 513px) {
+.deck-create-component .create-btn {
+  margin-top: 2rem;
+  margin-left: -12rem;
+  width: 24rem;
+}
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: -3rem;
+}
+
+}
+@media (max-width: 496px) {
+.deck-create-component .create-btn {
+  margin-top: 2rem;
+  margin-left: -13rem;
+  width: 24rem;
+}
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: -4rem;
+}
+
+}
+@media (max-width: 465px) {
+.search-btn {
+  margin-left: 24rem;
+}
+#search-box {
+    width: 249px;
+}
+.card {
+  margin-left: 10rem;
+  max-width: 345px !important;
+}
+
+}
+@media (max-width: 458px) {
+.search-btn {
+  margin-left: 24rem;
+}
+#search-box {
+  width: 249px;
+}
+.card {
+  margin-left: 10rem;
+  max-width: 345px !important;
+}
+
+.deck-create-component user-library {
+  margin-top: 8rem;
+  margin-left: -12rem;
+  width: 12rem;
+}
+.deck-create-component .create-group {
+  margin-top: 14rem;
+  margin-left: -16rem;
+  width: 19rem;
+}
+.deck-create-component .create-btn {
+  margin-top: 2rem;
+  margin-left: -12rem;
+  width: 19rem;
+}
+.deck-create-component .join-group {
+  margin-top: 20rem;
+  margin-left: -19rem;
+  width: 19rem;
+}
+.deck-create-component h1 {
+position: absolute;
+margin-top: -8rem;
+margin-left: -5rem;
+}
+
+}
+
+@media (max-width: 398px) {
+
+.deck-create-component h1 {
+  position: absolute;
+  margin-top: -8rem;
+  margin-left: -6rem;
+}
+.deck-create-component {
+  margin-top: -3rem;
+  margin-left: 11rem;
+}
+.deck-create-component .user-library {
+  margin-top: 8rem;
+  margin-left: -12rem;
+  width: 12rem;
+}
+.deck-create-component .create-group {
+margin-top: 14rem;
+margin-left: -19rem;
+width: 19rem;
+}
+.search-btn {
+  margin-left: 19rem;
+}
+#search-box {
+  width: 183px;
+}
+.card {
+  margin-left: 10.5rem;
+  max-width: 319px !important;
+}
+}
+

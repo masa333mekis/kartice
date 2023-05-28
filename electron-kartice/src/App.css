@@ -1,0 +1,253 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.card {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 10px;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease-in-out;
+}
+.card p{
+  overflow-wrap: anywhere;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.card h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin: 16px;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin: 0 16px 16px 16px;
+}
+
+
+.popup-modal {
+  display: none; /* Hide popup by default */
+  position: fixed; /* Position it on top of the content */
+  z-index: 999; /* Ensure it appears on top of everything else */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.popup-content {
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 18px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+}
+
+.form-group input[type="file"] {
+  cursor: pointer; /* Change cursor to pointer when hovering over file input */
+}
+
+.btn {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+#search-container {
+  display: flex;
+  padding: 10px;
+  justify-content: center; /* Centers the search bar container */
+}
+
+#search-box {
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  width: 300px; /* Width of the search box */
+  background-color: #f2f2f2; /* Background color of the search box */
+  font-size: 16px; /* Font size of the search box text */
+  color: #333; /* Text color of the search box text */
+}
+
+#search-button {
+  background-color: #4CAF50; /* Background color of the search button */
+  border: none;
+  border-radius: 20px;
+  color: white; /* Text color of the search button */
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 10px; /* Adds some space between the search box and button */
+  transition: all 0.3s ease-in-out; /* Adds a smooth transition effect when hovering over the search button */
+}
+
+#search-button:hover {
+  background-color: #3e8e41; /* Darker shade of green on hover */
+}
+#button-dark{
+  background-color: white; /* Background color of the search button */
+  border: none;
+  border-radius: 20px;
+  color: black; /* Text color of the search button */
+  cursor: pointer;
+  padding: 7px;
+  width: 70px;
+  margin-left: 10px; /* Adds some space between the search box and button */
+  transition: all 0.3s ease-in-out;
+}
+#button-light {
+  background-color: black; /* Background color of the search button */
+  border: none;
+  border-radius: 20px;
+  color: white; /* Text color of the search button */
+  cursor: pointer;
+  padding: 7px;
+  width: 70px;
+  margin-left: 10px; /* Adds some space between the search box and button */
+  transition: all 0.3s ease-in-out; /* Adds a smooth transition effect when hovering over the search button */
+}
+.timer{
+  margin-left: auto;
+  margin-right: 40px;
+}
+.logout-btn{
+  background-color: blue; /* Background color of the search button */
+  border: none;
+  border-radius: 20px;
+  color: white; /* Text color of the search button */
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 15px; /* Adds some space between the search box and button */
+  transition: all 0.3s ease-in-out; /* Adds a smooth transition effect when hovering over the search button */
+}
+
+.dark{
+  background-color: #333;
+  color: #fff;
+}
+.light{
+  background-color: #fff;
+  color: #333;
+}
+.main-container{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+
+.slider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  background-color: #333;
+  color: white;
+}
+
+.card-side {
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 0.6s ease;
+}
+
+.card-side.front {
+  transform: rotateY(0deg);
+
+}
+
+.card-side.back {
+  transform: rotateY(180deg);
+}
+
+.card-side.back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card2 .buttons{
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.card2 button {
+  margin-top: auto;
+  /* position: absolute; */
+  /* bottom: 20px; */
+  /* left: 50%;
+  transform: translateX(-50%); */
+}
+.card2 p{
+  overflow-wrap: anywhere;
+}

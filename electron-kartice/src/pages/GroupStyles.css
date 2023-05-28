@@ -1,0 +1,35 @@
+.main-topic{
+    /* margin-top: -8rem; */
+}
+.decks-container{
+    margin-top: -2rem;
+
+}
+
+.btns{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+.add-deck{
+    margin-right: 10px;
+}
+.group-decks-list
+{
+    max-height: 350px;
+    overflow-y: auto; 
+    width: 400px;
+}
+.delete-btn{
+    margin-right: 15px;
+}
+.group-decks-dark .deck-name{
+    color: white;
+}
+.group-decks-dark:hover .deck-name{
+color: #007bff;
+}
+
+.group-decks-dark:hover{
+color: #050505;
+}
